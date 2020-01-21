@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CS839 - Modern Data Management and Machine Learning Systems (Spring 2020)</title>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<div class="container">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CS 839</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#description">Description</a></li>
+              <li><a href="#logistics">Class Logistics</a></li>
+              <li><a href="#lecture">Lecture Plan</a></li>
+              <li><a href="#grading">Grading</a></li>                          
+              <li class="divider"></li>
+              <li><a href="#late-policy">Late Policy</a></li>                      
+            </ul>
+          </li>
+          <li><a href="#office-hours">Office Hours</a></li>           
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron">
+<h1>CS839 Modern Data Management and Machine Learning Systems</h1>
+<h3>COMP SCI 1325 on TuTh 9:30AM - 10:45AM</h3>
+<p class="lead"> Class mailing list <a href="mailto:compsci839-1-s20@lists.wisc.edu">compsci839-1-s20@lists.wisc.edu</a>. We will be using it for announcements.</p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Description</div>
+  <div class="panel-body">
+    <a name="description"></a>
+    <p> Modern Data Analytics and Machine learning (ML) are enjoying rapidly increasing adoption. However, designing and implementing the systems that support modern data analytics and machine learning in real-world deployments presents a significant challenge, in large part due to the radically different development and deployment profile of modern data analysis methods, and the range of practical concerns that come with broader adoption.</p>
+    <p> In this seminar course, we will describe the latest trends in modern data management and machine learning systems designs to better support the next generation of ML applications, and applications of ML to optimize the architecture and the performance of data management systems.</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Class Logistics</div>
+  <div class="panel-body">
+	  <a name="logistics"></a>
+    <p> <b>Class Format</b>
+    <ul>
+    <li><p>This is a seminar course. The format of this course will be a mix of lectures, seminar-style discussions, student presentations. Students will be responsible for paper readings, conference-style reviews, and completing a hands-on project. For projects, we will strongly encourage teams of <b>three people</b>.</p></li>
+    </ul>
+    </p>	  
+<p><b>Assignments</b>
+    <ul>
+      <li>Paper reviews/presentations (Individual assignments).
+      <li>Semester Project (Group assignment). We encourage students to find projects that relate to their ongoing research.</li>            
+      <li>There will be <b> no midterm or final exams</b>.</li>
+    </ul>
+</p>
+<p><b>Misc</b>
+    <ul>
+      <li>The lecture schedule may be updated to accomodate obligations of the instructor.</li>            
+    </ul>
+</p>
+
+
+
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Tentative Lecture Plan (Subject to Change)</h2>
+  </div>
+  <div class="panel-body">
+    <a name="lecture"></a>    
+    <p>
+    <hr /> 
+
+<table class="plan">
+  <tbody>
+    <tr>
+      <th>Week</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Lecture Materials</th>
+      <th>Reading Material</th>
+      <th>Assignments</th>
+    </tr>
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Introduction and Class Overview</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1/21</td>
+      <td>Logistics and The Technical Aspects of Production ML</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 1</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>MLSys: <a href="https://arxiv.org/abs/1904.03257">MLSys Whitepaper</a></li>
+          <li><a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf">A Few Useful Things to Know About Machine Learning</a></li>
+          <li>Polyzotis et al. <a href="https://research.google/pubs/pub46178/">Data Management Challenges in Production Machine Learning</a>, SIGMOD 2017</li>
+        </ul>
+      </td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Machine Learning Life-Cycle</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1/23</td>
+      <td>Machine Learning Life-Cycle: A systems' percpective</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 2</a> 
+      </td>      
+      <td class="side-borders"></td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>1/28</td>
+      <td>Machine Learning Life-Cycle: A systems' percpective</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li><a href="https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf">Hidden Technical Debt in Machine Learning Systems</a> (Paper to review)</li>
+          <li><a href="http://sites.computer.org/debull/A18dec/issue1.htm">Data Engineering Bulletin: Machine Learning Life-cycle Management</a></li>
+          <li><a href="http://sites.computer.org/debull/A18dec/p39.pdf">Accelerating the Machine Learning Lifecycle with MLflow</a></li>
+          <li><a href="https://research.google/pubs/pub46484/">TFX: A TensorFlow-Based Production-Scale Machine Learning Platform</a></li>
+          <li><a href="https://www-cs.stanford.edu/~matei/papers/2016/hilda_modeldb.pdf">MODELDB: A System for Machine Learning Model Management</a></li>          
+        </ul>
+      </td> 
+      <td>         
+        <ul>
+          <li>Submit your reviews <a href="">here</a>.</li>          
+        </ul>      
+      </td> 
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>1/30</td>
+      <td><b>No Class</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <b>No Lecture</b>
+      </td>      
+      <td class="side-borders"></td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Training Data Collection</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>2/4</td>
+      <td>Weak-Supervision: Automating The Collection of Training Data</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 3</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>2/6</td>
+      <td>Weak-Supervision: Automating The Collection of Training Data</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li><a href="https://arxiv.org/abs/1810.02840">Training Complex Models with Multi-Task Weak Supervision
+</a> (to review)</li>
+          <li><a href="https://arxiv.org/abs/1902.09229">A Theoretical Analysis of Contrastive Unsupervised Representation Learning</a></li>
+          <li><a href="https://arxiv.org/abs/1909.07930">Ludwig: a type-based declarative deep learning toolbox
+
+</a></li>
+          <li><a href="https://arxiv.org/pdf/1811.03402">A Survey on Data Collection for Machine Learning: A Big Data - AI Integration Perspective</a></li>
+          <li><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf">AutoAugment: Learning Augmentation Strategies From Data</a></li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Data Validation</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>2/11</td>
+      <td>Managing Noisy Data</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 4</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>2/13</td>
+      <td>Managing Noisy Data</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li><a href="https://arxiv.org/abs/1801.06750">A Formal Framework For Probabilistic Unclean Databases</a>(to review)</li>
+          <li><a href="https://arxiv.org/pdf/1811.00741.pdf">Stronger Data Poisoning Attacks Break Data Sanitization Defenses</a></li>
+          <li><a href="http://proceedings.mlr.press/v37/globerson15.html">How Hard is Inference for Structured Prediction?</a></li>
+          <li><a href="http://proceedings.mlr.press/v97/diakonikolas19a/diakonikolas19a.pdf">Sever: A Robust Meta-Algorithm for Stochastic Optimization</a></li>
+          <li><a href="https://openreview.net/forum?id=rJx1Na4Fwr">MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius</a></li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Addaptive Data Management</td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>2/18</td>
+      <td>Learnable Data Structures</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 5</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>2/20</td>
+      <td>Learnable Data Structures</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li><a href="https://www.cl.cam.ac.uk/~ey204/teaching/ACS/R244_2018_2019/papers/Kraska_SIGMOD_2018.pdf">The Case for Learned Index Structures</a> (to review)</li>
+          <li><a href="https://stratos.seas.harvard.edu/files/stratos/files/learningdatastructurealchemy.pdf">Learning Data Structure Alchemy</a></li>
+          <li><a href="https://arxiv.org/pdf/1912.01668">Learning Multi-Dimensional Indexes</a></li>
+          <li><a href="https://stratos.seas.harvard.edu/files/stratos/files/periodictabledatastructures.pdf">The Periodic Table of Data Structures</a></li>
+          <li><a href="https://arxiv.org/abs/1809.00677">Learned Cardinalities: Estimating Correlated Joins with Deep Learning</a></li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Project Proposal Review</td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>2/25</td>
+      <td><b>No Class</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Proposal Submission Deadline (by end-of-day).</a>      
+      </td>      
+      <td class="side-borders">        
+      </td>
+      <td>         
+          <li>Instructions for submitting your Project Proposal can be found <a href="">here</a>.</li>
+      </td> 
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>2/27</td>
+      <td><b>Meetings with Instructor to Review Project Proposals</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->      
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Sign-up sheet (15-minute slots):</li>          
+        </ul>
+      </td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Project Proposal Review</td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>3/3</td>
+      <td><b>No Class (MLSys 2020)</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->          
+      <b> No Lecture </b>
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>3/5</td>
+      <td><b>Meetings with Instructor to Review Project Proposals</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->      
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Sign-up sheet (15-minute slots):</li>          
+        </ul>
+      </td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Serving Feature Selection Workloads</td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>3/10</td>
+      <td>Optimizations for Feature Selection Workloads</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 6</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>3/12</td>
+      <td>Optimizations for Feature Selection Workloads</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6"><font color=red><b>Spring Break</b></font></td>
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Automated Machine Learning (AutoML)</td>
+    </tr>
+
+    <tr>
+      <td>10</td>
+      <td>3/24</td>
+      <td>Efficient and Robust Automated Machine Learning</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 7</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>10</td>
+      <td>3/26</td>
+      <td>Efficient and Robust Automated Machine Learning</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Distributed Model Training</td>
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td>3/31</td>
+      <td>Distributed Model Training</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 8</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td>4/2</td>
+      <td>Distributed Model Training</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Efficient Prediction Serving</td>
+    </tr>
+
+    <tr>
+      <td>12</td>
+      <td>4/7</td>
+      <td>Model Cascades</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 9</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>12</td>
+      <td>4/9</td>
+      <td>Model Cascades</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Model Compression</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td>4/14</td>
+      <td>Low-Precision and Low-Rank Learning</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 10</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td>4/16</td>
+      <td>Low-Precision and Low-Rank Learning</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Relational Bias in Neural Networks</td>
+    </tr>
+
+    <tr>
+      <td>14</td>
+      <td>4/21</td>
+      <td>Graph (Neural) Networks</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Lecture 11</a>      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>14</td>
+      <td>4/23</td>
+      <td>Graph (Neural) Networks</td>
+      <td class="side-borders">
+      <!-- Lecture -->
+      <a href="">Paper Review and Discussion</a> 
+      </td>      
+      <td class="side-borders">
+        <ul>
+          <li>Paper 1 (to review)</li>
+          <li>Paper 2</li>
+          <li>Paper 3</li>
+          <li>Paper 4</li>
+          <li>Paper 5</li>          
+        </ul>
+      </td> 
+      <td><li>Submit your reviews <a href="">here</a>.</li></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Project Presentations Week</td>
+    </tr>
+
+    <tr>
+      <td>15</td>
+      <td>4/28</td>
+      <td><b>Project Presentations Part 1</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>        
+      </td> 
+    </tr>
+
+    <tr>
+      <td>15</td>
+      <td>4/30</td>
+      <td><b>Project Presentations Part 2</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->      
+      </td>      
+      <td class="side-borders">        
+      </td> 
+      <td></td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Final Project Report</td>
+    </tr>
+
+    <tr>
+      <td>16</td>
+      <td>5/8</td>
+      <td><b>Final Project Report Due (by end-of-day)</b></td>
+      <td class="side-borders">
+      <!-- Lecture -->      
+      </td>      
+      <td class="side-borders"></td> 
+      <td>
+        <li>Instructions for submitting your Final Project Report can be found <a href="">here</a>.</li>        
+      </td> 
+    </tr>
+
+    
+
+  </tbody>
+</table>
+
+</p>
+</div>
+</div> 
+
+<div class="panel panel-default">
+  <div class="panel-heading">Grading</div>
+  <div class="panel-body">
+    <a name="grading"></a>
+    <table class="table">      
+      <tr><td>Reviews and Presentations</td><td>20%</td>      
+      <tr><td>Project Presentation</td><td>20%</td>      
+      <tr><td>Project Final Report</td><td>60%</td>      
+    </table>    
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Office Hours</div>
+  <div class="panel-body">
+    <a name="office-hours"></a>
+    <p>Theo: by appointment @ Room CS4361</p>    
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Late Policy and Deliverables</div>
+  <div class="panel-body">
+  <a name="late-policy"></a>
+There will be <b>no late dates for the project deliverables</b>. However, you have the option to <b>skip up to two reviews</b>. Additional extensions may be granted in the case of a severe medical or family emergency.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Credit</div>
+  <div class="panel-body">  
+The template of this website was created by HazyReseach@Stanford.
+  </div>
+</div>
+
+</div>
+</body>
+
+</html>
